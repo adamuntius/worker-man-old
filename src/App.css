@@ -1,38 +1,323 @@
-.App {
+/*general stylings */
+html {
+  font-size: 16px;
+}
+.body {
+  font-family: 'Roboto', sans-serif;
+}
+.confirmation-modal {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.stocks-modal {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.modal-content {
+  position: relative;
+  background-color: #fdfdfd;
+  margin: 5rem auto;
+  border: 1px solid #888;
+  width: 40%;
+  height: 20%;
+}
+.modal-text {
+  position: absolute;
   text-align: center;
+  left: 0;
+  right: 0;
+  top: 1rem;
+  margin: auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#yes-btn {
+  position: absolute;
+  left: 1.5rem;
+  top: 5.5rem;
+  padding: .5rem 3rem;
 }
+#no-btn {
+  position: absolute;
+  right: 1.5rem;
+  top: 5.5rem;
+  padding: .5rem 3rem;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
+.close {
+  position: absolute;
+  right: .75rem;
+  top: 0rem;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-text {
+  margin: 1.5rem 1.5rem;
+}
+.main-wrapper > div {
+  text-align: center;
+  border-color: #144;
+}
+.btn {
+  background-color: #333;
+  color: #DEE;
+  padding: 1rem;
+  margin: 0rem 6rem;
+  font-size: 18px;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: #111;
+}
+.inline-button {
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.inline-button:hover {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  cursor: pointer;
+  border-style: solid;
+  border-color: #111;
+  color: black;
+  /* font-weight: bold; */
+  background-color: #fefefe;
+}
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-auto-rows: 26rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+.label {
+  margin: 2rem 4rem;
+  background-color: #5C5;
+  color: #000;
+  padding: .4rem;
+  font-size: 18px;
+  border-radius: .2rem;
+  border-style: solid;
+  border-width: thin;
+}
+.small-label {
+  margin: 0rem 2rem .5rem 2rem;
+  background-color: #DDD;
+  color: #111;
+  padding: .8rem 1.2rem;
+  font-size: 12px;
+  border-radius: .2rem;
+  border-style: solid;
+  border-width: thin;
+  white-space: nowrap;
+}
+.education-progress {
+  color: #CC2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* expenses block coding */
+.expenses-block {
+  max-width: 100%;
+  border-style: solid;
+  border-bottom-width: 0;
+  border-right-width: 0;
+}
+
+
+/* market block coding */
+.market-wrapper {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.market-wrapper > h1 {
+  grid-column: 1/3;
+}
+.market-block {
+  max-width: 100%;
+  max-height: 100%;
+  border-style: solid;
+  border-bottom-width: 0;
+}
+.market-btn {
+  background-color: #333;
+  color: #DEE;
+  padding: .4rem;
+  margin: 1rem 3rem;
+  font-size: 16px;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: #111;
+}
+.market-btn:hover {
+  cursor: pointer;
+  background-color: #fefefe;
+  color: #101;
+  border-style: solid;
+  border-color: #111;
+}
+
+/* passive income block coding */
+.passive-income-block {
+  max-width: 100%;
+  max-height: 100%;
+  border-style: solid;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  justify-content: center;
+  align-items: center;
+}
+#passive-income-list {
+  list-style-type: none;
+  width: 100%;
+}
+#passive-income-list > li {
+  position: absolute;
+  align-self: center;
+
+}
+/* upgrade block coding */
+.upgrade-block {
+  max-width: 100%;
+  text-align: center;
+  border-style: solid;
+  border-right-width: 0;
+}
+.work-speed-upgrade {
+  margin: 1rem 4rem 0rem 4rem;
+  font-size: 12px;
+}
+.raise {
+  margin: 1rem 4rem 0rem 4rem;
+  font-size: 12px;
+}
+.work-experience.label {
+  background-color: #2A9CD8;
+}
+.buy-education {
+  margin: 1rem 4rem 0rem 4rem;
+  font-size: 12px;
+}
+
+/* center block coding */
+.center-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.work {
+  min-width: 100%;
+  max-width: 100%;
+}
+.education {
+  min-width: 100%;
+  max-width: 100%;
+}
+.heading {
+  font-size: 40px;
+}
+.worktext-container {
+  margin: 1rem 1rem;
+}
+.worktext {
+  display: inline;
+  margin-right: .4rem;
+}
+.fa-briefcase {
+  display: inline;
+}
+.center-block {
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  border-style: solid;
+}
+.block {
+  position: relative;
+  background-color: #13A;
+  margin: 2rem 0rem 2rem 0rem;
+  left: 10%;
+  width: 0rem;
+  height: 1rem;
+  border-radius: .5rem;
+}
+.small-label-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.cash-per-work {
+}
+.learn-container {
+  margin: 4.65rem 1rem 1rem 1rem;
+}
+.learn-btn {
+  display: inline;
+  margin-right: .4rem;
+}
+.learn-container:hover {
+
+}
+.learn-slider {
+  position: relative;
+  background-color: #13A;
+  margin: 2rem 0rem 2rem 0rem;
+  left: 10%;
+  width: 0rem;
+  height: 1rem;
+  border-radius: .5rem;
+}
+.education-progress {
+
+}
+
+
+/*portfolio-block coding*/
+.portfolio-block {
+  max-width: 100%;
+  max-height: 100%;
+  border-style: solid;
+  border-left-width: 0;
+  text-align: center;
+}
+#stocks-text {
+  display: inline;
+  margin-right: .4rem;
+}
+
+/* information-block coding */
+.information-block {
+
+}
+.date {
+  position: relative;
+  text-align: left;
+  left: 2%;
+  margin-top: 1rem;
+}
+.user {
+  position: relative;
+  text-align: left;
+  left: 2%;
+  margin-top: 1rem;
 }
